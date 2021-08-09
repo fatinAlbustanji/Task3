@@ -1,0 +1,221 @@
+{
+  "intents": [
+    {
+      "intent": "Achievements",
+      "examples": [
+        {
+          "text": "Achievements"
+        }
+      ],
+      "description": "company Achievements"
+    },
+    {
+      "intent": "Brief",
+      "examples": [
+        {
+          "text": "about"
+        },
+        {
+          "text": "brief"
+        },
+        {
+          "text": "who are you"
+        }
+      ],
+      "description": "Brief about the company"
+    },
+    {
+      "intent": "contact",
+      "examples": [
+        {
+          "text": "contacting"
+        },
+        {
+          "text": "email"
+        },
+        {
+          "text": "how can i contact the company"
+        },
+        {
+          "text": "mobile"
+        }
+      ],
+      "description": "information for contacting "
+    },
+    {
+      "intent": "location",
+      "examples": [
+        {
+          "text": "location"
+        },
+        {
+          "text": "place"
+        }
+      ],
+      "description": "location of the company"
+    },
+    {
+      "intent": "vision",
+      "examples": [
+        {
+          "text": "company vision"
+        },
+        {
+          "text": "vision"
+        },
+        {
+          "text": "your vision"
+        }
+      ],
+      "description": "vision of the company"
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "SMART METHODs: A national commercial corporation established in 2010 and registered in the Ministry of Commerce, Specialized in automated machine, robots and artificial intelligence. The commercial facility is considered as the first in the service of researchers and innovators in Arab world, and classified by Forbes magazine as one of the most innovative companies in the Kingdom of Saudi Arabia in the latest classification in 2015."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Brief",
+      "dialog_node": "node_2_1628386655956",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Saudi Arabia - Makkah\nHeadquarter Office - Butha Quraish - Main street - Almudaa Building - Office No.7\nSales Branch - Misfalah - Alkenkariah Street - Afwaj Al-Tawba Hotel - Exhibition No.4\nReception Branch - Wadi Makkah - Company Building - Office No.6\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#location",
+      "dialog_node": "node_2_1628386809693",
+      "previous_sibling": "node_4_1628386766801"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Some of company achievements; 1675 Implemented Electronic Circuits, 36 Robots and Manufactured Mechanical Systems, 675 Supported Scientific Research and 843 Innovations Implemented and Recorded."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Achievements",
+      "dialog_node": "node_3_1628386731782",
+      "previous_sibling": "node_2_1628386655956"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Mobile Phone: 0580202718 | Email: info@s-m.com.sa"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#contact",
+      "dialog_node": "node_4_1628386766801",
+      "previous_sibling": "node_3_1628386731782"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Smart Method had Futures vision which is to be the first destination for innovators and researchers in the Arab world and provide them with everything they need in the field of electronics, mechanics and computers."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#vision",
+      "dialog_node": "node_7_1628386857689",
+      "previous_sibling": "node_2_1628386809693"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
